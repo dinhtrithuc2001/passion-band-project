@@ -1,0 +1,110 @@
+.HomePage-Carousel {
+    .carousel-inner {
+        .carousel-caption {
+            top: 45%;
+
+            h2 {
+                font-size: 2.1rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+
+                @include responsive ('sm') {
+                    font-size: 3rem;
+                }
+                @include responsive ('md') {
+                    font-size: 4rem;
+                }
+            }
+
+            .content {
+                margin-top: 4.3rem;
+                @include responsive ('md') {
+                    margin-top: 5rem;
+                }
+            }
+
+            button {
+                position: absolute;
+                bottom: 25%;
+                @include responsive ('md') {
+                    bottom: 32%;
+                }
+                @include responsive ('lg') {
+                    bottom: 35%;
+                }
+            }
+
+            // Text effect
+            .hidden {
+                opacity: 0;
+            }
+
+            .console-container {
+                font-family: "Roboto", sans-serif;
+                font-size: 2rem;
+                font-weight: 700;
+                text-align: left;
+                display: block;
+                position: absolute;
+                color: white;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                @include responsive ('sm') {
+                    font-size: 3rem;
+                }
+                @include responsive ('md') {
+                    font-size: 4rem;
+                }
+            }
+
+            .console-underscore {
+                display: inline-block;
+                position: relative;
+                top: -0.14em;
+                left: 10px;
+            }
+        }
+
+        img {
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .overlay-carousel {
+            background-color: rgba(0, 0, 0, 0.188);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &.item2 {
+                background-color: rgba(0, 0, 0, 0.337);
+            }
+
+            &.item3 {
+                background-color: rgba(0, 0, 0, 0.426);
+            }
+        }
+    }
+
+    .carousel-indicators {
+        display: none;
+        bottom: 10%;
+        justify-content: start;
+
+        button {
+            border-radius: 50% !important;
+            margin-right: 8px;
+            width: 15px !important;
+            height: 15px !important;
+        }
+
+        @include responsive ('md') {
+            display: flex;
+        }
+    }
+}

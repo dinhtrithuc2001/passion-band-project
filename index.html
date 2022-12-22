@@ -30,6 +30,10 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- LightBox 2 CSS -->
+    <link rel="stylesheet" href="./css/lightbox.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Passion Band | Acoustic & Sự kiện, tiệc cưới, phòng trà</title>
@@ -51,16 +55,16 @@
                 <div class="order-lg-2 d-lg-flex w-100 sidebar pb-3 pb-lg-0 justify-content-center">
                     <ul class="navbar-nav mr-lg-auto mb-2 mb-lg-0 mt-4 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link mx-3" href="#">Booking Show</a>
+                            <a class="nav-link mx-3" href="#thongTinLienHe">Booking Show</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3 mt-2 mt-lg-0" href="#">Thông Tin</a>
+                            <a class="nav-link mx-3 mt-2 mt-lg-0" href="#thongTinBand">Thông Tin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3 mt-2 mt-lg-0" href="#">Dịch Vụ</a>
+                            <a class="nav-link mx-3 mt-2 mt-lg-0" href="#dichVuBand">Dịch Vụ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3 mt-2 mt-lg-0" href="#">Video</a>
+                            <a class="nav-link mx-3 mt-2 mt-lg-0" href="#videoBand">Video</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-3 mt-2 mt-lg-0" href="#">Hoạt Động & Tuyển Dụng</a>
@@ -75,6 +79,7 @@
         </nav>
     </header>
     <main>
+        <!-- Carousel -->
         <section class="HomePage-Carousel">
             <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-touch="true"
                 data-bs-ride="carousel">
@@ -100,7 +105,7 @@
                                 <h5>Luôn mang đến các buổi hòa âm tuyệt vời</h5>
                                 <h5>Phục vụ acoustic coffee, sự kiện, tiệc cưới ...</h5>
                             </div>
-                            <button class="btn-contact animate__animated animate__infinite animate__pulse"">
+                            <button onclick="window.location.href='#thongTinLienHe'" class="btn-contact animate__animated animate__infinite animate__pulse">
                                 Liên Hệ Ngay
                             </button>
                         </div>
@@ -116,7 +121,7 @@
                                         <h5>Cho thuê full âm thanh, setup âm thanh cho các sự kiện</h5>
                                         <h5>Phục vụ acoustic coffee, sự kiện, tiệc cưới ...</h5>
                                     </div>
-                                    <button class="btn-contact animate__animated animate__infinite animate__pulse">
+                                    <button onclick="window.location.href='#thongTinLienHe'" class="btn-contact animate__animated animate__infinite animate__pulse">
                                         Liên Hệ Ngay
                                     </button>
                                 </div>
@@ -132,7 +137,7 @@
                                     <h5>Đa dạng màu sắc âm nhạc - pop - ballad - jazz - bolero ...</h5>
                                     <h5>Phục vụ acoustic coffee, sự kiện, tiệc cưới ...</h5>
                                 </div>
-                                <button class="btn-contact animate__animated animate__infinite animate__pulse">
+                                <button onclick="window.location.href='#thongTinLienHe'" class="btn-contact animate__animated animate__infinite animate__pulse">
                                     Liên Hệ Ngay
                                 </button>
                             </div>
@@ -150,28 +155,294 @@
                     </button>
                 </div>
         </section>
-        <section class="HomePage-ThongTin my-5">
-            <h2 class="text-center">Thông Tin Band Nhạc</h2>
-            <br>
+        <!-- Thong Tin -->
+        <section class="HomePage-ThongTin" id="thongTinBand">
+            <video class="HomePage-ThongTin__videoBg" autoplay loop muted>
+                <source type="video/mp4"
+                    src="https://live.staticflickr.com/video/52576786356/64aa974e8a/720p.mp4?s=eyJpIjo1MjU3Njc4NjM1NiwiZSI6MTY3MTYxMDEzMywicyI6ImY4NTJlMTI1NTA4NWJjOThkMzE5NTZiNDYwZWNhNThkOTU2MzA4NTAiLCJ2IjoxfQ">
+            </video>
+            <div class="HomePage-ThongTin__content">
+                <div class="container">
+                    <h2 class="text-center title text-white mb-1 mb-lg-2 mb-xl-4">Giới Thiệu về band</h2>
+                    <div class="row">
+                        <div class="HomePage-ThongTin__content__detail text-white col-12 col-lg-6 col-xl-8">
+                            <h5 class="d-none d-md-block">- Tụi mình thành lập vào 23/07/2019</h5>
+                            <h5>- Band mình chuyên phục vụ các show acoustic coffee, sự kiện, tiệc cưới, sinh nhật, khai
+                                trương
+                                ...</h5>
+                            <h5 class="d-none d-md-block">- Đội ngũ quy tụ những thành viên trẻ, nhiệt huyết, đam mê và
+                                tận tâm với nghề</h5>
+                            <h5>- Với <a class="fw-bold" target="_blank"
+                                    href="https://www.facebook.com/Passionacousticband">Fanpage Facebook</a> đạt 6K
+                                người theo dõi, thu hút nhiều khán thính giả</h5>
+                            <h5>- Phục vụ đa dạng các thể loại nhạc là thế mạnh của band</h5>
+                            <h5>- Band hiện có các Artist: Vocal, Guitar, Bass, Piano, Keyboard, SPD, Cajon, Drum,
+                                Violin</h5>
+                            <h5 class="d-none d-md-block">- Hơn thế nữa bên mình có cho thuê âm thanh (loa, mixer, amp,
+                                ...) và nhận setup âm
+                                thanh các sự
+                                kiện</h5>
+
+                            <button onclick="window.location.href='#thongTinLienHe'" class="btn-contact animate__animated animate__infinite animate__pulse mt-2 mb-2">
+                                Liên Hệ Ngay
+                            </button>
+
+                        </div>
+                        <div class="swiper mySwiper col-12 col-lg-6 col-xl-4">
+                            <div class="swiper-wrapper">
+                                <a href="https://live.staticflickr.com/65535/52575307185_46af7fa8ee_b.jpg"
+                                    data-title="Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img src="https://live.staticflickr.com/65535/52575307185_46af7fa8ee_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin2">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52577186511_e27b4006da_b.jpg"
+                                    data-title="Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img style="object-position: top;"
+                                        src="https://live.staticflickr.com/65535/52577186511_e27b4006da_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin3">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52575307330_a6ab8fde2a_b.jpg"
+                                    data-title="Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img src="https://live.staticflickr.com/65535/52575307330_a6ab8fde2a_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin4">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52575385123_456cdd3fd3_b.jpg"
+                                    data-title="Tuấn Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img style="object-position: top;"
+                                        src="https://live.staticflickr.com/65535/52575385123_456cdd3fd3_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin5">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52575307420_5aa39b3986_b.jpg"
+                                    data-title="Đạt Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img src="https://live.staticflickr.com/65535/52575307420_5aa39b3986_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin6">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52575307655_da473c8ee6_b.jpg"
+                                    data-title="Nhật Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img src="https://live.staticflickr.com/65535/52575307655_da473c8ee6_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin7">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52574391197_2490c516e4_b.jpg"
+                                    data-title="Thiện Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img src="https://live.staticflickr.com/65535/52574391197_2490c516e4_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin8">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52575697518_49419745d0_b.jpg"
+                                    data-title="Thức Passion-Band" data-lightbox="Passion-Band" class="swiper-slide">
+                                    <img style="object-position: top left;"
+                                        src="https://live.staticflickr.com/65535/52575697518_49419745d0_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin9">
+                                </a>
+                                <a href="https://live.staticflickr.com/65535/52575385113_d1f448d7e9_b.jpg"
+                                    data-title="Tuấn Tiến Passion-Band" data-lightbox="Passion-Band"
+                                    class="swiper-slide">
+                                    <img src="https://live.staticflickr.com/65535/52575385113_d1f448d7e9_b.jpg"
+                                        loading="lazy" alt="passion-band-thongtin10">
+                                </a>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="dichVuBand"></div>
+            </div>
+            <div class="HomePage-ThongTin__overlay"></div>
+
+        </section>
+        <!-- Dich Vu -->
+        <section class="HomePage-DichVu">
+            <div class="content-left d-none d-lg-block">
+                <img src="https://live.staticflickr.com/65535/52574390757_a7967f8c33_b.jpg"
+                    alt="https://live.staticflickr.com/65535/52574390757_a7967f8c33_b.jpg" loading="lazy">
+            </div>
+            <div class="container content-right">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6"></div>
+                    <div class="col-12 col-lg-6 text-white">
+                        <h2 class="title mt-2 mb-4">Dịch vụ</h2>
+                        <h5 class="text-uppercase">Band chuyên phục vụ các show: </h5>
+                        <div class="detail">
+                            <p>- Acoustic coffee, Phòng trà</p>
+                            <p>- Tiệc cưới, Đám hỏi</p>
+                            <p>- Sự kiện</p>
+                            <p>- Khai trương</p>
+                            <p>- Sinh nhật</p>
+                        </div>
+                        <h5 class="text-uppercase">Cho thuê âm thanh - Nhận setup âm thanh</h5>
+                        <button onclick="window.location.href='#thongTinLienHe'" class="btn-contact animate__animated animate__infinite animate__pulse mt-2 mb-2">
+                            Liên Hệ Ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-shape d-none d-lg-block"></div>
+        </section>
+        <!-- Video -->
+        <section class="HomePage-Video py-3" id="videoBand">
+            <h2 class="my-3">Video biểu diễn</h2>
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/Ngz2RxB0NKg">
+                            <img src="https://live.staticflickr.com/65535/52579292910_cd6d203e13_b.jpg"
+                                alt="passion-band-video-youtube-01" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/GOUKuzgPWG8">
+                            <img src="https://live.staticflickr.com/65535/52579123929_c2060a5059_b.jpg"
+                                alt="passion-band-video-youtube-02" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/cbKg88aQo9A">
+                            <img src="https://live.staticflickr.com/65535/52579380183_1f02b0f905_b.jpg"
+                                alt="passion-band-video-youtube-03" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/bo9h-G3Lv-4">
+                            <img src="https://live.staticflickr.com/65535/52578854136_5f3037cb6a_b.jpg"
+                                alt="passion-band-video-youtube-04" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/Ngz2RxB0NKg">
+                            <img src="https://live.staticflickr.com/65535/52579292910_cd6d203e13_b.jpg"
+                                alt="passion-band-video-youtube-05" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/GOUKuzgPWG8">
+                            <img src="https://live.staticflickr.com/65535/52579123929_c2060a5059_b.jpg"
+                                alt="passion-band-video-youtube-06" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/cbKg88aQo9A">
+                            <img src="https://live.staticflickr.com/65535/52579380183_1f02b0f905_b.jpg"
+                                alt="passion-band-video-youtube-07" loading="lazy">
+                        </button>
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="video-btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            data-src="https://www.youtube.com/embed/bo9h-G3Lv-4">
+                            <img src="https://live.staticflickr.com/65535/52578854136_5f3037cb6a_b.jpg"
+                                alt="passion-band-video-youtube-08" loading="lazy">
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="text-center text-black xemThem">
+                <h5>Xem thêm video tại <a style="text-decoration: none;"
+                        href="https://www.youtube.com/@passionacoustic3323/videos" target="_blank">Youtube Passion
+                        Acoustic</a></h5>
+                <h5>Hoặc <a style="text-decoration: none;" href="https://www.facebook.com/watch/Passionacousticband/"
+                        target="_blank">Fanpage Passion Acoustic Band</a></h5>
+            </div>
+            <!-- ------------------------------------------------- -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                            </button>
+                            <!-- 16:9 aspect ratio -->
+                            <div class="ratio ratio-16x9">
+                                <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                                    allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer id="thongTinLienHe">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 thongTinLienHe">
+                    <h5>THÔNG TIN LIÊN HỆ - PASSION BAND</h5>
+                    <ul>
+                        <li>
+                            <a href="mailto:acousticpassionband@gmail.com">
+                                <i class="far fa-envelope"></i>
+                                <span>Email: acousticpassionband@gmail.com</span>
+                            </a>
+                        </li>
+                        <li class="d-flex">
+                            <i class="fas fa-phone"></i>
+                            <span class="d-flex">
+                                Số điện thoại:
+                                <a class="mx-2 text-light" href="tel:0886009797">0886009797 -</a>
+                                <a class="text-light" href="tel:0908041618">0908041618</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://goo.gl/maps/JmWyjWFNKYjCgP8d9" target="_blank">
+                                <i class="fas fa-home"></i>
+                                <span>Đồng Nai - Bình Dương - Sài Gòn</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="mt-5">CÁC KÊNH TRUYỀN THÔNG VÀ MẠNG XÃ HỘI</h5>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/Passionacousticband" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                                <span>PAGE FACEBOOK</span>
+                            </a>
+                        </li>
 
+                        <li>
+                            <a href="#">
+                                <img src="./img/HomePage/zalo-icon.png" alt="passion-band-icon-zalo">
+                                <span>ZALO: 0886009797</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.messenger.com/t/345603003023849" target="_blank">
+                                <img src="./img/HomePage/messenger01.png" alt="passion-band-icon-zalo">
+                                <span>MESSENGER</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-6 ggMap text-center">
+                    <h5>Cảm ơn bạn đã tin tưởng Passion</h5>
+                    <h5>Live chat trực tiếp ở góc phải màn hình để book show nhanh nhất nhé !!</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6553851764647!2d106.77810649999999!3d10.913773299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d9bc53c7eb91%3A0x11618e98a914dde7!2zUGjDsm5nIHThuq1wIFBhc3Npb24gQmFuZA!5e0!3m2!1svi!2s!4v1671705382127!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
     </footer>
- 
-    <!-- Messenger Plugin chat Code -->
-    <div id="fb-root"></div>
 
+    <!------------------------------ Messenger Plugin chat Code ------------------------------>
+    <div id="fb-root"></div>
     <!-- Your Plugin chat code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-
     <script>
         var chatbox = document.getElementById('fb-customer-chat');
         chatbox.setAttribute("page_id", "345603003023849");
         chatbox.setAttribute("attribution", "biz_inbox");
     </script>
-
     <!-- Your SDK code -->
     <script>
         window.fbAsyncInit = function () {
@@ -180,7 +451,6 @@
                 version: 'v15.0'
             });
         };
-
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -189,6 +459,8 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+    <!------------------------------ END Messenger Plugin chat Code ------------------------------>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -201,7 +473,8 @@
         integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
-    <!-- Header Scroll -->
+
+    <!-- Header Scroll, Modal Bootstrap Get Url Youtube, stop youtube video-->
     <script>
         $(window).on("scroll", () => {
             var scroll = $(window).scrollTop();
@@ -212,7 +485,81 @@
                 $("#site-header").removeClass("nav-fixed");
             }
         });
+
+        $(document).ready(function () {
+            // Gets the video src from the data-src on each button
+            var $videoSrc;
+            $('.video-btn').click(function () {
+                $videoSrc = $(this).data("src");
+            });
+            // when the modal is opened autoplay it  
+            $('#myModal').on('shown.bs.modal', function (e) {
+
+                // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+                $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+            })
+            // stop playing the youtube video when I close the modal
+            $('#myModal').on('hide.bs.modal', function (e) {
+                // a poor man's stop video
+                $("#video").attr('src', $videoSrc);
+            })
+            // document ready  
+        });
     </script>
+    <!--------------------------------->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+            }
+        });
+    </script>
+    <!-- for mySwiper2 -->
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            grid: {
+                rows: 2,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                425: {
+                    spaceBetween: 30,
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+
+        });
+    </script>
+
+    <!-- LightBox -->
+    <script src="./js/lightbox.min.js"></script>
 </body>
 
 </html>

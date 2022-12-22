@@ -8,9 +8,22 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  color: black !important;
+  background: yellow;
+}
+
+::selection {
+  color: black !important;
+  background: yellow;
 }
 
 header .overlay,
@@ -134,8 +147,68 @@ header.nav-fixed .navbar-light .navbar-nav .nav-item .nav-link:hover {
   color: rgb(175, 4, 4);
 }
 
+footer {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  padding: 6rem 0;
+}
+footer .thongTinLienHe ul {
+  padding: 0;
+}
+footer .thongTinLienHe h5 {
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 2.3rem;
+}
+footer .thongTinLienHe span {
+  color: white;
+  line-height: 2rem;
+  margin-left: 0.5rem;
+  transition: all 0.3s;
+  font-size: 13px;
+}
+@media screen and (min-width: 576px) {
+  footer .thongTinLienHe span {
+    font-size: 16px;
+  }
+}
+footer .thongTinLienHe span:hover {
+  color: rgb(246, 255, 0);
+}
+footer .thongTinLienHe a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+footer .thongTinLienHe i {
+  font-size: 30px;
+  color: white;
+}
+footer .thongTinLienHe img {
+  width: 30px;
+  height: 30px;
+}
+footer .thongTinLienHe li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+footer .ggMap h5 {
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  margin-bottom: 2.3rem;
+}
+footer .ggMap iframe {
+  width: 100%;
+  height: 300px;
+}
+
 .HomePage-Carousel .carousel-inner .carousel-caption {
-  top: 45%;
+  top: 30%;
+}
+@media screen and (min-width: 992px) {
+  .HomePage-Carousel .carousel-inner .carousel-caption {
+    top: 45%;
+  }
 }
 .HomePage-Carousel .carousel-inner .carousel-caption h2 {
   font-size: 2.1rem;
@@ -153,16 +226,20 @@ header.nav-fixed .navbar-light .navbar-nav .nav-item .nav-link:hover {
   }
 }
 .HomePage-Carousel .carousel-inner .carousel-caption .content {
-  margin-top: 4.3rem;
+  margin-top: 5rem;
+}
+.HomePage-Carousel .carousel-inner .carousel-caption h5 {
+  font-size: 1rem;
+  letter-spacing: 1.25px;
 }
 @media screen and (min-width: 768px) {
-  .HomePage-Carousel .carousel-inner .carousel-caption .content {
-    margin-top: 5rem;
+  .HomePage-Carousel .carousel-inner .carousel-caption h5 {
+    font-size: 1.25rem;
   }
 }
 .HomePage-Carousel .carousel-inner .carousel-caption button {
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
 }
 @media screen and (min-width: 768px) {
   .HomePage-Carousel .carousel-inner .carousel-caption button {
@@ -244,15 +321,15 @@ header.nav-fixed .navbar-light .navbar-nav .nav-item .nav-link:hover {
 }
 
 .btn-contact {
-  background-color: rgb(215, 248, 1);
+  background: linear-gradient(63deg, rgb(105, 195, 34) 0%, rgb(249, 253, 45) 100%);
   border: none;
-  font-size: 17px;
+  font-size: 14px;
   color: #000;
   font-weight: 600;
   border-radius: 10px;
   letter-spacing: 1px;
-  padding: 15px 30px;
-  width: 200px;
+  padding: 10px 18px;
+  width: 150px;
   text-align: center;
   transition-duration: 0.4s;
   text-decoration: none;
@@ -261,8 +338,14 @@ header.nav-fixed .navbar-light .navbar-nav .nav-item .nav-link:hover {
   text-transform: uppercase;
 }
 .btn-contact:hover {
-  background-color: rgb(223, 248, 1);
   transform: scale(1.05);
+}
+@media screen and (min-width: 768px) {
+  .btn-contact {
+    padding: 15px 30px;
+    width: 200px;
+    font-size: 17px;
+  }
 }
 
 .btn-contact:after {
@@ -283,4 +366,410 @@ header.nav-fixed .navbar-light .navbar-nav .nav-item .nav-link:hover {
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+.HomePage-ThongTin {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.HomePage-ThongTin .title {
+  font-weight: 900;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  background: linear-gradient(to right, #FFF 20%, rgb(140, 255, 0) 40%, #FF0 60%, #FFF 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 1s linear infinite;
+          animation: shine 1s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@media screen and (min-width: 576px) {
+  .HomePage-ThongTin .title {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HomePage-ThongTin .title {
+    font-size: 28px;
+  }
+}
+.HomePage-ThongTin__videoBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+  display: inline-block;
+}
+.HomePage-ThongTin__overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.347);
+  z-index: -1;
+}
+.HomePage-ThongTin__content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.547);
+  width: 90%;
+  max-height: 100vh;
+  border-radius: 8px;
+  padding: 10px 5px;
+}
+@media screen and (min-width: 768px) {
+  .HomePage-ThongTin__content {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .HomePage-ThongTin__content {
+    padding: 20px;
+    width: 70%;
+  }
+}
+.HomePage-ThongTin__content__detail {
+  letter-spacing: 1px;
+}
+.HomePage-ThongTin__content__detail h5 {
+  font-size: 14px;
+  line-height: 16px;
+}
+@media screen and (min-width: 992px) {
+  .HomePage-ThongTin__content__detail h5 {
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .HomePage-ThongTin__content__detail h5 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.HomePage-ThongTin__content__detail a {
+  text-decoration: none;
+}
+.HomePage-ThongTin .swiper {
+  height: 200px;
+}
+@media screen and (min-width: 576px) {
+  .HomePage-ThongTin .swiper {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .HomePage-ThongTin .swiper {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .HomePage-ThongTin .swiper {
+    height: 400px;
+  }
+}
+.HomePage-ThongTin .swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+}
+.HomePage-ThongTin .swiper-slide img {
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.HomePage-ThongTin .contact-icon img {
+  height: 40px;
+  width: 40px;
+}
+.HomePage-ThongTin .contact-icon i {
+  font-size: 40px;
+}
+
+.HomePage-DichVu {
+  overflow: hidden;
+  background-repeat: repeat;
+  background-size: auto;
+  background-color: #3f4244;
+  position: relative;
+  height: 500px;
+}
+.HomePage-DichVu .content-left {
+  position: absolute;
+  width: 50%;
+}
+.HomePage-DichVu .content-left img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.HomePage-DichVu .content-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.HomePage-DichVu .content-right .title {
+  font-weight: 900;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  background: linear-gradient(to right, #FFF 20%, rgb(140, 255, 0) 40%, #FF0 60%, #FFF 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 1s linear infinite;
+          animation: shine 1s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@media screen and (min-width: 576px) {
+  .HomePage-DichVu .content-right .title {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HomePage-DichVu .content-right .title {
+    font-size: 28px;
+  }
+}
+.HomePage-DichVu .content-right .detail p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e4e7e7;
+}
+@media screen and (min-width: 992px) {
+  .HomePage-DichVu .content-right .detail p {
+    font-size: 20px;
+  }
+}
+.HomePage-DichVu .content-right h5 {
+  font-size: 17px;
+}
+@media screen and (min-width: 576px) {
+  .HomePage-DichVu .content-right h5 {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HomePage-DichVu .content-right h5 {
+    font-size: 21px;
+  }
+}
+.HomePage-DichVu .content-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  background: #3f4244;
+}
+.HomePage-DichVu .content-shape::before {
+  position: absolute;
+  content: "";
+  left: -136px;
+  width: 0;
+  height: 0;
+  border-bottom: 700px solid #3f4244;
+  border-left: 136px solid transparent;
+}
+
+#videoBand {
+  scroll-margin-top: 5rem !important;
+}
+
+.HomePage-Video {
+  position: relative;
+}
+.HomePage-Video .xemThem h5 {
+  font-size: 14px;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 576px) {
+  .HomePage-Video .xemThem h5 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HomePage-Video .xemThem h5 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .HomePage-Video .xemThem h5 {
+    font-size: 25px;
+  }
+}
+.HomePage-Video h2 {
+  font-size: 21px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  .HomePage-Video h2 {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HomePage-Video h2 {
+    font-size: 28px;
+  }
+}
+.HomePage-Video .swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.HomePage-Video .swiper-wrapper {
+  height: 450px;
+}
+@media screen and (min-width: 425px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 480px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 730px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 880px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 550px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 420px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .HomePage-Video .swiper-wrapper {
+    min-height: 600px;
+  }
+}
+.HomePage-Video .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomePage-Video .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+.HomePage-Video .swiper-slide button {
+  border: none !important;
+}
+.HomePage-Video .swiper-slide button::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f04b";
+  font-size: 30px;
+  position: absolute;
+  font-weight: 900;
+  color: white;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 50px;
+  padding-left: 5px;
+  background: black;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.HomePage-Video .swiper-slide button:hover {
+  cursor: pointer;
+}
+.HomePage-Video .swiper-slide button:hover::before {
+  opacity: 1;
+}
+.HomePage-Video .modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+.HomePage-Video .modal-body {
+  position: relative;
+  padding: 0px;
+}
+.HomePage-Video .btn-close {
+  position: absolute;
+  right: -30px;
+  top: 0;
 }/*# sourceMappingURL=style.css.map */

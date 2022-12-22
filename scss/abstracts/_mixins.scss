@@ -1,11 +1,44 @@
-// ví dụ:  
+@mixin title() {
+    .title {
+        font-weight: 900;
+        font-size: 21px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        background: linear-gradient(to right, #FFF 20%, rgb(140, 255, 0) 40%, #FF0 60%, #FFF 80%);
+        background-size: 200% auto;
+        color: #000;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: shine 1s linear infinite;
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @include responsive('sm') {
+            font-size: 23px;
+        }
+
+        @include responsive('md') {
+            font-size: 28px;
+        }
+    }
+}
+
 @mixin responsive($screen) {
     @if(map-has-key($map: $breakpoint, $key: $screen)) {
         $value: map-get($map: $breakpoint, $key: $screen);
+
         @media screen and (min-width: $value) {
             @content;
         }
     }
+
     @else {
         @warn"`{$screen}` isn't in breakpoint";
     }

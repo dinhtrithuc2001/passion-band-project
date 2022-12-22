@@ -13,23 +13,23 @@ overlay.addEventListener("click", closeSideNav);
 // ---------- 
 
 // ----------  Prevent inspect elements
-// document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-// function ctrlShiftKey(e, keyCode) {
-//   return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-// }
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
 
-// document.onkeydown = (e) => {
+document.onkeydown = (e) => {
 
-//   if (
-//     event.keyCode === 123 ||
-//     ctrlShiftKey(e, 'I') ||
-//     ctrlShiftKey(e, 'J') ||
-//     ctrlShiftKey(e, 'C') ||
-//     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-//   )
-//     return false;
-// };
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
 // ---------- 
 
 // Effect Text Carousel Home Page

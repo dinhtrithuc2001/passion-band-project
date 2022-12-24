@@ -714,7 +714,12 @@ footer .ggMap iframe {
 }
 @media screen and (min-width: 1400px) {
   .HomePage-Video .swiper-wrapper {
-    min-height: 600px;
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .HomePage-Video .swiper-wrapper {
+    height: 900px;
   }
 }
 .HomePage-Video .swiper-slide {

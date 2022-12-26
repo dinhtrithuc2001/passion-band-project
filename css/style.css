@@ -777,4 +777,55 @@ footer .ggMap iframe {
   position: absolute;
   right: -30px;
   top: 0;
+}
+
+.top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: none;
+  z-index: 99;
+  padding: 12px 18px;
+  background: linear-gradient(63deg, rgb(105, 195, 34) 0%, rgb(249, 253, 45) 100%);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  -webkit-animation: effectButtonScrollTop 1.5s infinite;
+          animation: effectButtonScrollTop 1.5s infinite;
+}
+.top:hover {
+  background: linear-gradient(231deg, rgb(101, 195, 29) 0%, rgb(243, 247, 35) 100%) !important;
+}
+
+@-webkit-keyframes effectButtonScrollTop {
+  0% {
+    bottom: 80px;
+    opacity: 0.8;
+  }
+  50% {
+    bottom: 100px;
+    opacity: 1;
+    background: linear-gradient(63deg, rgb(101, 195, 29) 0%, rgb(243, 247, 35) 100%);
+  }
+  100% {
+    bottom: 80px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes effectButtonScrollTop {
+  0% {
+    bottom: 80px;
+    opacity: 0.8;
+  }
+  50% {
+    bottom: 100px;
+    opacity: 1;
+    background: linear-gradient(63deg, rgb(101, 195, 29) 0%, rgb(243, 247, 35) 100%);
+  }
+  100% {
+    bottom: 80px;
+    opacity: 0.8;
+  }
 }/*# sourceMappingURL=style.css.map */

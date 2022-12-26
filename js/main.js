@@ -84,3 +84,23 @@ function consoleText(words, id, colors) {
     }, 400)
 }
 // ---------- 
+
+// Sự kiện cuộn trang của window
+window.onscroll = function() {
+    var x, top;
+    top = document.getElementsByClassName('top')[0];
+    
+    // Lấy vị trí khi người dùng cuộn trang
+    x = document.body.scrollTop || document.documentElement.scrollTop;
+    if(x > 20) {
+        top.style.display = "block";
+    }else{
+        top.style.display = "none";    
+    }
+    
+    // Gán sự kiện click sẽ chuyển lên đầu trang
+    top.onclick = function() {
+        document.body.scrollTop = 0; // safari
+        document.documentElement.scrollTop = 0; // IE, Chrome, Firefox, Opera    
+    }    
+}

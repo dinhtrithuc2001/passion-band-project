@@ -1,4 +1,5 @@
 .HomePage-DichVu {
+
     overflow: hidden;
     background-repeat: repeat;
     background-size: auto;
@@ -6,15 +7,42 @@
     position: relative;
     height: 500px;
 
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
     .content-left {
         position: absolute;
         width: 50%;
-
-        img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
+        padding-top: 4rem;
     }
 
     .content-right {
@@ -24,22 +52,27 @@
         transform: translate(-50%, -50%);
         z-index: 1;
         @include title();
+
         .detail {
             p {
                 font-size: 16px;
                 font-weight: 500;
                 color: #e4e7e7;
-                @include responsive('lg'){
+
+                @include responsive('lg') {
                     font-size: 20px;
                 }
             }
         }
+
         h5 {
             font-size: 17px;
-            @include responsive('sm'){
+
+            @include responsive('sm') {
                 font-size: 19px;
             }
-            @include responsive('md'){
+
+            @include responsive('md') {
                 font-size: 21px;
             }
         }
@@ -54,6 +87,7 @@
         pointer-events: none;
         transform: translate3d(0, 0, 0);
         background: #3f4244;
+
         &::before {
             position: absolute;
             content: '';

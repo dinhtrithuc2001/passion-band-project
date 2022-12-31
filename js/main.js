@@ -33,7 +33,7 @@ document.onkeydown = (e) => {
 // ---------- 
 
 // Effect Text Carousel Home Page
-consoleText(['Passion Band.', 'Acoustic Biên Hòa'], 'text', ['white']);
+consoleText(['Passion Band.', 'Passion Band'], 'text', ['white']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];

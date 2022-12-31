@@ -87,7 +87,9 @@
             position: absolute;
             top: 0;
             left: 0;
-
+            &.item1 {
+                background-color: rgba(0, 0, 0, 0.393);
+            }
             &.item2 {
                 background-color: rgba(0, 0, 0, 0.337);
             }
@@ -96,6 +98,8 @@
                 background-color: rgba(0, 0, 0, 0.426);
             }
         }
+
+
     }
 
     .carousel-indicators {

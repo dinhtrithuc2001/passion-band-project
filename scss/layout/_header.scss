@@ -9,11 +9,10 @@ header {
 
     .sidebar {
         left: -100%;
-        max-width: 300px;
+        max-width: 270px;
         transition: all ease 0.25s;
         overflow-y: auto;
         z-index: 1032;
-        // background-color: #212529 ;
         background-image: url('../../img/HomePage/passion-band-horse.gif');
         background-size: 600%;
         background-repeat: no-repeat;

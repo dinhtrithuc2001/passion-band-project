@@ -34,7 +34,7 @@ header .sidebar {
 }
 header .sidebar {
   left: -100%;
-  max-width: 300px;
+  max-width: 270px;
   transition: all ease 0.25s;
   overflow-y: auto;
   z-index: 1032;
@@ -517,12 +517,10 @@ footer .ggMap iframe {
 }
 
 .HomePage-DichVu {
-  overflow: hidden;
   background-repeat: repeat;
   background-size: auto;
   background-color: #3f4244;
   position: relative;
-  height: 500px;
 }
 .HomePage-DichVu .swiper {
   width: 100%;
@@ -538,23 +536,27 @@ footer .ggMap iframe {
   align-items: center;
 }
 .HomePage-DichVu .swiper-slide img {
-  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 .HomePage-DichVu .content-left {
-  position: absolute;
-  width: 50%;
+  order: 2;
   padding-top: 4rem;
 }
+@media screen and (min-width: 992px) {
+  .HomePage-DichVu .content-left {
+    order: 1 !important;
+  }
+}
 .HomePage-DichVu .content-right {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  order: 1;
+}
+@media screen and (min-width: 992px) {
+  .HomePage-DichVu .content-right {
+    order: 2 !important;
+  }
 }
 .HomePage-DichVu .content-right .title {
   font-weight: 900;
@@ -608,25 +610,6 @@ footer .ggMap iframe {
   .HomePage-DichVu .content-right h5 {
     font-size: 21px;
   }
-}
-.HomePage-DichVu .content-shape {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  pointer-events: none;
-  transform: translate3d(0, 0, 0);
-  background: #3f4244;
-}
-.HomePage-DichVu .content-shape::before {
-  position: absolute;
-  content: "";
-  left: -136px;
-  width: 0;
-  height: 0;
-  border-bottom: 700px solid #3f4244;
-  border-left: 136px solid transparent;
 }
 
 #videoBand {
